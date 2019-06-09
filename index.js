@@ -65,12 +65,16 @@ let gameDeck = randomizeDeck(drawDeck);
 
 function cardsOnTable(myDeck) {
     let drawnCard = myDeck.cards[0];
-    drawnCard.faceDown = false;
+    if (drawnCard.facedown = true){
+        drawnCard.faceDown = false;
+    } else {
+        randomizeDeck(myDeck)
+    }
     return drawnCard
 }
 console.log(cardsOnTable(player1Deck))
 
-//on each click we need to adjust myDeck.cardsAmount either -- for each player
+//on each click we need to adjust myDeck.cardsAmount either -1 for each player
 
 
 function cardValue(card) {
@@ -136,5 +140,5 @@ function war(deck1, deck2) {
 console.log(war(player1Deck, player2Deck))
 // need to adjust myDeck.push(6 cards from the game with faceDown false) and myDeck.cardsAmount +2 for winner 
 
-//every time before clicking for a 'next pull' I need to run a loop to check if a card about to be pulled has faceDown property set to true. when I come across the cards with property faceDown:false I need to run randomizeDeck() on each player's stack
+//every time before clicking for a 'next pull' I need to check if a card about to be pulled has faceDown property set to true. when I come across the cards with property faceDown:false I need to run randomizeDeck() on each player's stack. Also once one of the player's cardAmount hits 0 means the end of the game
 
