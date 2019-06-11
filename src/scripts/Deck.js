@@ -5,10 +5,10 @@ import Card from './Card'
 
 export default class Deck {
     constructor() {
-        this.deck = [];
+        this.cards = [];
         for (let rank of Card.RANKS) {
             for (let suit of Card.SUITS) {
-                this.deck.push(new Card(suit, rank))
+                this.cards.push(new Card(suit, rank))
             }
         }
     }
@@ -22,7 +22,7 @@ export default class Deck {
  
     randomizeDeck() {
         const gameDeck = [];
-        const myCards = this.deck;
+        const myCards = this.cards;
         
         for (let i = 0; i < 52; i++) {
             const index = this.randomNum(myCards.length);

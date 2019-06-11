@@ -8,26 +8,14 @@ export default class Stack {
         this.cardsAmount = this.cards.length;
         
     } 
-    toggleFace(){
-        return this.card.faceUp = !this.card.faceUp;
-    }
+   
     pullCards() {
-        let drawnCard = this.cards.shift();
-        if (drawnCard.facedown = true){
-            drawnCard.faceDown.toggleFace();
+        let drawnCard = this.cards[0];
+        if (drawnCard.faceDown = true){
+            drawnCard.faceDown = false;
             } else {
-               randomizeDeck(myDeck)
+               randomizeDeck(this.cards)
             }
                 return drawnCard
     }
 }
-// function cardsOnTable(myDeck) {
-//     let drawnCard = myDeck.cards[0];
-//     if (drawnCard.facedown = true){
-//         drawnCard.faceDown = false;
-//     } else {
-//         randomizeDeck(myDeck)
-//     }
-//     return drawnCard
-// }
-// console.log(cardsOnTable(player1Deck))

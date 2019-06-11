@@ -21,13 +21,13 @@ console.log(myCard)
 
 let newDeck = new Deck();
 console.log(newDeck)
-console.log(newDeck.deck[30].getCardValue());
+console.log(newDeck.cards[30].getCardValue());
 
-let myStack = new Stack(newDeck.deck);
+let myStack = new Stack(newDeck.cards);
 console.log(myStack.pullCards())
 
 const myGame = new Game();
-console.log(myGame)
+console.log(myGame.start(newDeck))
   myGame.start();
        
 

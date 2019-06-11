@@ -16,8 +16,8 @@ export default class Game {
     start() {
         const deck = new Deck();
         deck.randomizeDeck();
-        this.player1 =  new Stack(deck.deck.slice(0, 26));
-        this.player2 = new Stack(deck.deck.slice(27, 52));
+        this.player1 =  new Stack(deck.cards.slice(0, 26));
+        this.player2 = new Stack(deck.cards.slice(27, 52));
     }
 
     compare(){
