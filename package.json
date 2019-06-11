@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/KasiaMirowska/WARgame/issues"
   },
-  "homepage": "https://github.com/KasiaMirowska/WARgame#readme"
+  "homepage": "https://github.com/KasiaMirowska/WARgame#readme",
+  "dependencies": {
+    "jquery": "^3.4.1"
+  }
 }
