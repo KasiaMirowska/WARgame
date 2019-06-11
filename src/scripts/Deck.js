@@ -1,7 +1,7 @@
 'use strict';
 import Card from './Card'
 
-console.log("hi there, deck is connected")
+// console.log("hi there, deck is connected")
 
 export default class Deck {
     constructor() {
@@ -35,7 +35,4 @@ export default class Deck {
     }
 
 }
-// let deck = new Deck();
-// console.log(typeof deck, 'hi')
-// console.log(new Deck)
-// // export default Deck;
+

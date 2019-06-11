@@ -1,12 +1,33 @@
 'use strict';
 
+import $ from 'jquery';
 import Deck from './Deck';
-// import Game from './Game';
+import Card from './Card';
+import Stack from'./Stack';
+import Game from './Game';
+
+function main() {
+  
+  console.log('DOM is loaded');
+
+  const startMsg = $('<p>Webpack is working!</p>');
+  $('#root').append(startMsg);
+}
+
+$(main);
+
+let myCard = new Card();
+console.log(myCard)
 
 let newDeck = new Deck();
-console.log(newDeck.randomizeDeck());
+console.log(newDeck)
+console.log(newDeck.deck[30].getCardValue());
 
+let myStack = new Stack(newDeck.deck);
+console.log(myStack)
 
+const myGame = new Game();
+console.log(myGame)
 // const drawDeck = new Stack(deck);
 
 // // function randomizedeck + first a deck needs assigned index

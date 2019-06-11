@@ -1,7 +1,6 @@
 'use strict';
 
 
-
 export default class Stack {
     constructor(cards = []) {
         this.cards = cards;
@@ -9,5 +8,3 @@ export default class Stack {
         this.cardsAmount = this.cards.length;
     }   
 }
-
-// console.log(myStack)
