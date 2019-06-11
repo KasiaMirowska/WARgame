@@ -13,7 +13,7 @@ export default class Deck {
         }
     }
 
-    randomNum(num) {
+        randomNum(num) {
         let min = Math.ceil(0);
         let max = Math.floor(num);
         return Math.floor(Math.random() * (max - min)) + min;
@@ -23,7 +23,6 @@ export default class Deck {
     randomizeDeck() {
         const gameDeck = [];
         const myCards = this.cards;
-        
         for (let i = 0; i < 52; i++) {
             const index = this.randomNum(myCards.length);
             const currentCard = myCards.slice(index, index + 1)[0]; //returns an array and I need just its element, hence [0]
@@ -31,7 +30,7 @@ export default class Deck {
             gameDeck.push(currentCard);
         }
         
-       return gameDeck;
+       this.cards = gameDeck;
     }
 
 }

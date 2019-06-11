@@ -16,21 +16,23 @@ function main() {
 
 $(main);
 
-let myCard = new Card();
-console.log(myCard)
+// let myCard = new Card();
+// console.log(myCard)
 
 let newDeck = new Deck();
 console.log(newDeck)
-console.log(newDeck.cards[30].getCardValue());
+ newDeck.randomizeDeck();
 
-let myStack = new Stack(newDeck.cards);
-console.log(myStack.pullCards())
+
+ let myStack = new Stack(newDeck.cards);
+// // myStack.randomize();
+console.log(myStack.pull().getCardValue())
 
 const myGame = new Game();
-console.log(myGame.start(newDeck))
-  myGame.start();
-       
-
+console.log(myGame)
+   myGame.start();
+    myGame.pullCards()   
+  myGame.compare()
 // const drawDeck = new Stack(deck);
 
 // // function randomizedeck + first a deck needs assigned index
