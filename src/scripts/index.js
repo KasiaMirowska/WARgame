@@ -24,10 +24,13 @@ console.log(newDeck)
 console.log(newDeck.deck[30].getCardValue());
 
 let myStack = new Stack(newDeck.deck);
-console.log(myStack)
+console.log(myStack.pullCards())
 
 const myGame = new Game();
 console.log(myGame)
+  myGame.start();
+       
+
 // const drawDeck = new Stack(deck);
 
 // // function randomizedeck + first a deck needs assigned index
