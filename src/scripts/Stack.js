@@ -6,18 +6,23 @@
 export default class Stack {
     constructor(cards = []) {
         this.cards = cards;
-        // this.faceUp = [];
-        this.cardsAmount = this.cards.length;
+        console.log(this.cards, 'inside stack')
     } 
     
     pull() {
-        let drawnCard = this.cards[0];
+        let drawnCard = this.cards.shift();
         if (drawnCard.faceDown = true){
             drawnCard.faceDown = false;
             } else {
                randomizeDeck(this.cards)
             }
-            console.log(drawnCard)
+            
                 return drawnCard
+    }
+
+    warPull() {
+        let warCard =this.cards.shift()
+                return warCard;
+       
     }
 }

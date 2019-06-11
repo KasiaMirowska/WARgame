@@ -33,6 +33,9 @@ console.log(myGame)
    myGame.start();
     myGame.pullCards()   
   myGame.compare()
+  myGame.adjustStack()
+  myGame.pullForWar();
+  myGame.compareWar();
 // const drawDeck = new Stack(deck);
 
 // // function randomizedeck + first a deck needs assigned index
