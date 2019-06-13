@@ -6,6 +6,8 @@ console.log("hi there, game is connected")
 
 export default class Game {
     constructor(){
+        this.deck = null;
+        this.stack = null;
         this.player1 = null;
         this.player2 = null;
         this.card1 = null;
@@ -18,14 +20,9 @@ export default class Game {
         this.deck.randomizeDeck();
         this.player1 = new Stack(this.deck.cards.slice(0, 26)) ;
         this.player2 = new Stack(this.deck.cards.slice(26, 52));
-        // window.addEventListener('click', function(){
-        //     this.pullCards();
-        //     this.compare();
-        //     this.adjustStack();
-            
-        // })
-        // console.log(this.player1, 'player1')
-        // console.log(this.player2, 'player2')
+        
+         console.log(this.player1, 'player1')
+         console.log(this.player2, 'player2')
     }
 
     pullCards() {
@@ -56,10 +53,9 @@ export default class Game {
     adjustStack(){
         console.log(this.pullWinner)
         this.pullWinner.cards.push(this.card1, this.card2)
-                // console.log(this.winner.cards.length)
-                console.log(this.player2.cards, 'P2')
-                console.log(this.player1.cards, 'P1')
-                console.log(this.player1.cards.length)
+            console.log(this.player2.cards, 'P2')
+            console.log(this.player1.cards, 'P1')
+            console.log(this.player1.cards.length)
             console.log(this.player2.cards.length)
     }
     

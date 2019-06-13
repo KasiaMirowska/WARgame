@@ -7,8 +7,7 @@ import Stack from'./Stack';
 import Game from './Game';
 import GameDisplay from './GameDisplay';
 
-// let myCard = new Card();
-// console.log(myCard)
+
 function main(){
 // let newDeck = new Deck();
 // console.log(newDeck)
@@ -29,6 +28,6 @@ function main(){
 //   myGame.compareWar();
   const display = new GameDisplay();
   console.log(display);
-  display.handleStart()
+  display.handleStart();
 }
 $(main);
