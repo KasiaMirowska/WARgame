@@ -48,6 +48,7 @@ export default class Game {
         }
     
     adjustStack(){
+        console.log(this.pullWinner)
         this.pullWinner.cards.push(this.card1, this.card2)
                 // console.log(this.winner.cards.length)
                 console.log(this.player2.cards, 'P2')
@@ -89,7 +90,7 @@ export default class Game {
            
         }
 
-        adjustStack(){
+        adjustWarStack(){
             this.warWinner.cards.push(this.card1, this.card2, this.card3, this.card4, this.card5, this.card6)
     }
 }

@@ -5,20 +5,11 @@ import Deck from './Deck';
 import Card from './Card';
 import Stack from'./Stack';
 import Game from './Game';
-
-function main() {
-  
-  console.log('DOM is loaded');
-
-  const startMsg = $('<p>Webpack is working!</p>');
-  $('#root').append(startMsg);
-}
-
-$(main);
+import GameDisplay from './GameDisplay';
 
 // let myCard = new Card();
 // console.log(myCard)
-
+function main(){
 let newDeck = new Deck();
 console.log(newDeck)
  newDeck.randomizeDeck();
@@ -28,14 +19,19 @@ console.log(newDeck)
 // // myStack.randomize();
 console.log(myStack.pull().getCardValue())
 
-const myGame = new Game();
-console.log(myGame)
-   myGame.start();
-    myGame.pullCards()   
-  myGame.compare()
-  myGame.adjustStack()
-  myGame.pullForWar();
-  myGame.compareWar();
+// const myGame = new Game();
+// console.log(myGame)
+//    myGame.start();
+//     myGame.pullCards()   
+//   myGame.compare()
+//   myGame.adjustStack()
+//   myGame.pullForWar();
+//   myGame.compareWar();
+  const display = new GameDisplay();
+  console.log(display);
+  display.handleStart()
+}
+$(main);
 // const drawDeck = new Stack(deck);
 
 // // function randomizedeck + first a deck needs assigned index

@@ -16,7 +16,6 @@ export default class Stack {
             } else {
                randomizeDeck(this.cards)
             }
-            
                 return drawnCard
     }
 
