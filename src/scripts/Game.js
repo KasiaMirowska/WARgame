@@ -18,6 +18,12 @@ export default class Game {
         this.deck.randomizeDeck();
         this.player1 = new Stack(this.deck.cards.slice(0, 26)) ;
         this.player2 = new Stack(this.deck.cards.slice(26, 52));
+        // window.addEventListener('click', function(){
+        //     this.pullCards();
+        //     this.compare();
+        //     this.adjustStack();
+            
+        // })
         // console.log(this.player1, 'player1')
         // console.log(this.player2, 'player2')
     }
