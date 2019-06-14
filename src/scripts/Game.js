@@ -2,7 +2,8 @@
 
 import Stack from './Stack';
 import Deck from './Deck';
-console.log("hi there, game is connected")
+
+
 
 export default class Game {
     constructor(){
@@ -42,6 +43,7 @@ export default class Game {
                 winner = this.player2;
             }
             if (cardA === cardB) {
+                console.log('am i reaching this?')
                 winner = 'war';
             }
             
@@ -50,11 +52,11 @@ export default class Game {
     
     adjustStack(){
         console.log('is it working?')
-        if (typeof this.pullWinner ==='war'){
-            this.pullWinner.cards
+        if (typeof this.pullWinner ==='string'){
+            console.log(typeof this.pullWinner)
+             this.pullWinner = 'War';
         }
         else{
-            console.log(typeof this.pullWinner)
             this.pullWinner.cards.push(this.card1, this.card2)
         }
         

@@ -45,6 +45,10 @@ export default class GameDisplay {
         }
     }
 
+    clearView(){
+        $('.card-display').empty();
+    }
+   
     handleStart() {
         $('.start').on('click', e => {
             e.preventDefault();
@@ -81,6 +85,7 @@ export default class GameDisplay {
         $('.check').on('click', e => {
             e.preventDefault();
             this.myGame.adjustStack();
+            this.handleWar();
             let html3 = this.generateAnnouncement();
             let html2 = this.generateStartView();
             $('.card-display').empty();

@@ -11,6 +11,9 @@ export default class Stack {
     
     pull() {
         let drawnCard = this.cards.shift();
+        if (!drawnCard) {
+            drawnCard = 0;
+        }
         if (drawnCard.faceDown = true){
             drawnCard.faceDown = false;
             } else {

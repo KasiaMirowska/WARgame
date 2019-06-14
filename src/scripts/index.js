@@ -12,6 +12,7 @@ function main(){
   display.handlePullCards();
   display.generateAnnouncement();
   display.handleScore();
-  
+  display.handleWar();
+  display.clearView()
 }
 $(main);
