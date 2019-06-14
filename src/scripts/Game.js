@@ -6,8 +6,6 @@ console.log("hi there, game is connected")
 
 export default class Game {
     constructor(){
-        this.deck = null;
-        this.stack = null;
         this.player1 = null;
         this.player2 = null;
         this.card1 = null;
@@ -31,6 +29,7 @@ export default class Game {
         // console.log(this.card1,'first', this.card2,'second')
     }
     compare(){
+        
         let winner;
         let cardA = this.card1.getCardValue()
         let cardB = this.card2.getCardValue()
@@ -43,20 +42,26 @@ export default class Game {
                 winner = this.player2;
             }
             if (cardA === cardB) {
-                winner = " we have a WAR!"
+                winner = 'war';
             }
             
             this.pullWinner = winner;
-            console.log(this.pullWinner)
         }
     
     adjustStack(){
-        console.log(this.pullWinner)
-        this.pullWinner.cards.push(this.card1, this.card2)
-            console.log(this.player2.cards, 'P2')
-            console.log(this.player1.cards, 'P1')
-            console.log(this.player1.cards.length)
-            console.log(this.player2.cards.length)
+        console.log('is it working?')
+        if (typeof this.pullWinner ==='war'){
+            this.pullWinner.cards
+        }
+        else{
+            console.log(typeof this.pullWinner)
+            this.pullWinner.cards.push(this.card1, this.card2)
+        }
+        
+            // console.log(this.player2.cards, 'P2')
+            // console.log(this.player1.cards, 'P1')
+            // console.log(this.player1.cards.length)
+            // console.log(this.player2.cards.length)
     }
     
     pullForWar() {
